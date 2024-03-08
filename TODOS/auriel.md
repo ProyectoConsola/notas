@@ -1,0 +1,11 @@
+# Quehaceres de Aaron Uriel
+- [x] **Darme una visión general de CMake**. Con el Framework ESP-IDF se usa CMake, unas nociones generales de su uso serán de ayuda.
+- [ ] **Hallar una forma adecuada de compartir las notas con todos**. Para que podamos avanzar mejor sería bueno tener un lugar común donde podamos tener las notas de todos y poder compartir nuestros conocimientos. Estoy pensando en un repo de GitHub.
+- [ ] **Creación de una plantilla para trabajar**. Dicha plantilla será la base para que cada equipo pueda aprovechar las bibliotecas que usaremos.
+	- [ ] **Hacerlo con ESP-IDF**. Todo nos indica que será más fácil así, me coloco como límite hasta el Lunes para lograrlo.
+	- [x] **Investigar que es cmd_nvs, cmd_router y cmd_system**. Son componentes del framework pero en mi versión parecen estar disponibles por ese nombre. Averiguaré que son, que hacen y si los necesitamos y porqué no están instalados.
+	- [ ] **Incluir una explicación de como se obtuvo**. Esto incluye la preparación de btstack, mencionar que problemas hay actualmente
+	- [ ] **Revisar ejemplos y como usan los componentes**. En especial los de la consola.
+- [ ] **Crear repo para notas**. Las notas estarían en Markdown, y todos podríamos contribuir, solo tendría que ver si hacemos una carpeta para cada persona o notas en conjunto de todos (en ese caso tengo que ver como evitar conflictos). El tutorial de markdown se los pasaría también de una https://www.markdowntutorial.com/es/lesson/3/
+- [ ] **¿Cuál es el máximo de tiempo de cambio de valor para que el contador de pulsos detecte un cambio?**
+- [ ] Investigar SPIFFS.
