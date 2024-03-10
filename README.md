@@ -16,14 +16,16 @@ realizar cambios en este repositorio.
 - Cualquier nota es modificable por cualquier miembro del equipo
 - Asegurarse de que los commits que suban agregen información un solo tema a
   la vez. Así el historial de cambios será más fácil de ver.
+- Recomendablemente den formato a los documentos de forma que no se pasen de
+  80 columnas de anchura. Facilita el trabajo en Vim xd.
 
 ## Referencias.
 El siguiente material puede ser de utilidad para trabajar con este
 repositorio:
 - [Markdown](https://daringfireball.net/projects/markdown/). Sitio oficial de
   Markdown, incluye también una explicación básica de la sintaxis.
-- [Markdown Tutorial]
-  (https://www.markdowntutorial.com/es/https://www.markdowntutorial.com/es/)
+- [Markdown Tutorial](
+  https://www.markdowntutorial.com/es/https://www.markdowntutorial.com/es/)
   Pequeño tutorial describiendo como funciona el lenguaje Markdown.
 - [Git](https://git-scm.com/). Sitio oficial de git, incluye documentación.
 - [gittutorial](https://git-scm.com/docs/gittutorial). Un tutorial pequeño
