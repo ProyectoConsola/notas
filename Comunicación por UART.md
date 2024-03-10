@@ -1,2 +1,0 @@
-Para comunicarnos por el puerto serial del ESP32 podemos usar los componentes `cmd_nvs`, `cmd_system` y `cmd_wifi`. Estos fueron hechos para un ejemplo de línea de comandos y no son componentes disponibles directamente por el framework por lo que tienen que ser copiados manualmente a la carpeta `components`.
-Más información en [Console examples](https://github.com/espressif/esp-idf/tree/master/examples/system/console).
