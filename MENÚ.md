@@ -1,7 +1,7 @@
-# Menú principal
+# Concepto
 La consola tendrá un menú que se usará en dos modos: escoger directamente,
 escoger aleatoriamente (como una ruleta).
-En el tianguis de la ciencia los juegos serán escogidos aleatoriamente.
+En el tianguis de la ciencia, los juegos serán escogidos aleatoriamente.
 Características principales:
 - Escoger un número aleatorio desde el principio para escoger el juego a
   ejecutar.
@@ -9,3 +9,11 @@ Características principales:
 - Retroalimentación visual donde se ven los juegos siendo escogidos. No es
   necesario ser una ruleta, formas como nombres siendo iluminados uno a la
   vez hasta detenerse en uno específico es suficiente retroalimentación.
+
+## Diseño
+El diseño pensado entonces incluye:
+- Un cuadro central mostrando un sprite representativo del juego.
+- Un botón inferior que muestre "Escoger" o "Aleatorio" dependiendo del modo.
+- Flechas del lado izquierdo y derecho de la pantalla indicando que hay más
+  juegos disponibles.
+- Un pequeño botón de ajustes.
