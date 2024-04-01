@@ -17,3 +17,16 @@ El diseño pensado entonces incluye:
 - Flechas del lado izquierdo y derecho de la pantalla indicando que hay más
   juegos disponibles.
 - Un pequeño botón de ajustes.
+
+# Función de escalado
+En el menú deseamos presentar sprites que representen al juego, estos sprites
+contienen pocos pixeles pero estos deberán de ser mostrados como más grandes,
+es necesaria una función de escalado.
+Inicialmente la idea es simplemente expandir la clase Sprite, que toma un
+bitmap, este sprite al momentos de dibujarse en pantalla deberá de expandirse
+simplemente repitiendo pixeles.
+Analizando el código resulta que:
+- Un sprite es solo una colección de bitmaps.
+- Es una estructura y no una clase, 
+- La lógica de dibujado para el sprite es realizada por el método
+  BitmappedDisplayController::setSprites
