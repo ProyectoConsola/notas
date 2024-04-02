@@ -1,15 +1,17 @@
 # VGA
 Video Gate Array es un estándar para transmitir información en forma de vídeo.
 Los colores son indicados por tres pines dentro del conector, cada uno de
-ellos definiendo los colores RGB con voltajes analógicos en combinaciones que
-van de 0 Volts a 0.7 Volts, una corriente mínima es requerida en caso
-contrario el dispositivo no podría detectar correctamente los voltajes.  
-Adicionalmente el estándar requiere de dos señales de sincronización:
-sincronización horizontal (H-SYNC) y sincronización vertical (V-SYNC).
-Donde la sincronización horizontal ocurre a una frecuencia bastante mayor que
-la sincronización vertical. Estas señales siguen lógica TTL y generalmente
-están son activas en bajo, es decir, cuando la sincronización está activa
-estas señales son de 0V.  
+ellos definiendo los colores RGB con voltajes analógicos de +0V hasta +7V,
+una corriente mínima es requerida para que el monitor detecte los voltajes.  
+La resolución de la pantalla es determinada por la frecuencia de las señales
+de sincronización horizontal (H-SYNC) y sincronización vertical (V-SYNC),
+ambas señales son pulsos TTL de +5V y por lo general son activas en bajo.
+- **H-SYNC**. Indica que ya se terminó de enviar la información para una
+  línea de píxeles, después de la sincronización el rayo que coloca los
+  colores baja a la siguiente línea.
+- **V-SYNC**. Indica que ya se acabó de dibujar un frame por completo y que
+  ahora se procedera a dibujar uno nuevo sobre el anterior.
+
 La siguiente imagen muestra un puerto VGA con sus pines y sus nombres:
 ![Pinout de un puerto VGA](images/vga_pinout.png)  
 Cada resolución tiene una frecuencia específica a la que se dibuja cada
