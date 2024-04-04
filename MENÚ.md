@@ -43,3 +43,4 @@ juegos disponibles, e ignorando presiones prolongadas de botones.
 Los juegos tendrán que ser llamados una vez presionado el botón de ejecutar,
 preferiblemente se liberará memoria relacionada con nuestro menú. Iniciados
 los juegos ya no será posible volver a el más que reiniciando la consola.
+

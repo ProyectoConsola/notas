@@ -49,3 +49,43 @@ este ya que se desea un sonido de buen volumen.
   construir el circuito generador de audio.
 - [ESP32 Pinout
   Reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
+
+# Organización del software
+## Separación de los juegos
+Cada juego contará con sus propias escenas y estructuras para manejar las
+mecánicas de los juegos, por lo que haremos una separación lógica entre los
+juegos y además habrá lógica unificada común a todos los juegos que servirá
+para registrar el estado de la consola. Terminaríamos con una jerarquía 
+Estado -> Juego -> Escenas -> Elementos:
+- Juego: es el espacio donde están declarados los controladores para pantalla
+  y objetos de mayor uso entre las escenas del juego.
+- Escena: Contiene la lógica pertenecientes a los objetos que estarán en
+  pantalla en un solo espacio, es decir, en una sola escena.
+- Elementos: elementos individuales participantes de una escena.
+
+### Estado global
+Representación lógica de la consola, en este estado se pueden acceder a los
+valores de parámetros, funciones necesarias para registrar aspectos de los
+juegos, funciones útiles y funciones para manejar dispositivos externos de
+entrada y salida necesarios para la consola.  
+Esta representación será dada simplemente por un namespace y su inicialización
+será dada con una función `init()`.
+
+#### Funciones para obtener parámetros
+- Tiempo que ha lleva el juego actual en ejecución.
+
+#### Funciones de registro
+- Función para registrar que un juego fue iniciado. Esta será obligatoriamente
+  llamada por cada juego.
+
+#### Dispositivos de entrada y salida
+- Control de PS3
+- Controlador de VGA provisto por FabGL. En caso de ser necesario habrá
+  elementos para facilitar el cambio entre VGAController y
+  VGADirectController.
+
+### Juegos
+Los juegos agrupan escenas propias donde cada juego tiene escenas únicas por
+lo que su manejo será distinto para cada uno. Las representaciones de juegos
+serán agrupadas por namespaces también teniendo una función `start()` que
+manejará la lógica interna de cada juego.
