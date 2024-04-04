@@ -49,6 +49,17 @@
   - [ ] Implementación del control del motor de pasos.
 - [ ] Diseño e implementación de interfaz que muestre los datos recibidos.
 
+## Pong
+- [ ] Determinar como funciona la detección de colisiones entre sprites
+  dentro de la clase Scene.
+- [ ] Implementación de las funciones que leen la entrada a partir del mando
+  de PlayStation 3.
+- [ ] Crear sprites necesarios para el juego.
+
+## Space Invaders
+- [x] Hacer compatible el juego con el mando de PlayStation 3.
+- [ ] Multijugador cooperativo.
+
 ## Sonido
 - [x] Determinar si necesitamos un amplificador de corriente para tener un
   sonido de buen volumen.
