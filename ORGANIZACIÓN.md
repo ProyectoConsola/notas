@@ -64,28 +64,38 @@ Estado -> Juego -> Escenas -> Elementos:
 - Elementos: elementos individuales participantes de una escena.
 
 ### Estado global
-Representación lógica de la consola, en este estado se pueden acceder a los
-valores de parámetros, funciones necesarias para registrar aspectos de los
-juegos, funciones útiles y funciones para manejar dispositivos externos de
-entrada y salida necesarios para la consola.  
-Esta representación será dada simplemente por un namespace y su inicialización
-será dada con una función `init()`.
+Representación lógica de los elementos consola, se pueden acceder a
+objetos, funciones y clases que deban de ser comunes a todos los juegos.  
+Será dada simplemente por un namespace y su inicialización
+será dada con una función específica.
 
-#### Funciones para obtener parámetros
-- Tiempo que ha lleva el juego actual en ejecución.
+#### Objetos
+- Controlador de VGA.
+- Controlador de audio.
 
-#### Funciones de registro
-- Función para registrar que un juego fue iniciado. Esta será obligatoriamente
-  llamada por cada juego.
+#### Funciones
+- Función inicializadora de objetos de FabGL y esp32-ps3.
 
-#### Dispositivos de entrada y salida
-- Control de PS3
-- Controlador de VGA provisto por FabGL. En caso de ser necesario habrá
-  elementos para facilitar el cambio entre VGAController y
-  VGADirectController.
+#### Clases
+- Clase para representar juegos.
 
 ### Juegos
-Los juegos agrupan escenas propias donde cada juego tiene escenas únicas por
-lo que su manejo será distinto para cada uno. Las representaciones de juegos
-serán agrupadas por namespaces también teniendo una función `start()` que
-manejará la lógica interna de cada juego.
+Los juegos agrupan escenas propias y a su vez también contienen variables
+globales que controlan su estado. Podemos decir que un juego tendrá
+las siguientes características:
+- Estados. Estos pueden ser como: "El jugador perdió", "El tiempo se acabó",
+  "Se está jugando en este momento".
+- Escenas: Como podría ser una escena inicial, del juego principal, y otras
+  adicionales como una pantalla de Game Over.
+- Mediciones. Tales como puntaje y el tiempo que se lleva jugando.
+- Modos: niveles de dificultad.
+
+Los juegos tendrán implementaciones distintas cada uno y algunas mecánicas
+como el conteo de tiempo no pueden ser manejadas con una clase abstracta por
+lo que los juegos estarán organizados por archivos, cada juego si tendrá
+acceso a un estado global pero por si mismos solo serán un conjunto de clases
+y objetos dentro de un archivo.  
+Será necesario:
+- Tener una función que incluya la lógica de lo que usualmente iría en `loop`
+  para que esta sea accesible.
+- Usar los objetos globales proporcionados por el "Estado".
